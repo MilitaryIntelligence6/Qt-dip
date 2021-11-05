@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>140</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>jump new page</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="openAction"/>
+    <addaction name="closeImageAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="resaveAction"/>
+   </widget>
+   <widget class="QMenu" name="editMenu">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="resumeAction"/>
+    <addaction name="histogramAction"/>
+    <addaction name="grayImageAction"/>
+    <addaction name="brightnessAction"/>
+    <addaction name="separator"/>
+    <addaction name="beganDictationAction"/>
+    <addaction name="expressionAndSymbolAction"/>
+   </widget>
+   <widget class="QMenu" name="artMenu">
+    <property name="title">
+     <string>艺术效果</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>相框</string>
+     </property>
+     <addaction name="movieAction"/>
+     <addaction name="classicAction"/>
+     <addaction name="flowersAction"/>
+    </widget>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>纹理</string>
+     </property>
+     <addaction name="metalAction"/>
+    </widget>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>色温</string>
+     </property>
+     <addaction name="clodAction"/>
+     <addaction name="warmAction"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="menu_2"/>
+    <addaction name="menu_3"/>
+   </widget>
+   <widget class="QMenu" name="blurAndSharpenMenu">
+    <property name="title">
+     <string>模糊与锐化</string>
+    </property>
+    <addaction name="simpleBlurAction"/>
+    <addaction name="gaussianAction"/>
+    <addaction name="separator"/>
+    <addaction name="medianFilteringAction"/>
+    <addaction name="separator"/>
+    <addaction name="laplaceSharpeningAction"/>
+   </widget>
+   <widget class="QMenu" name="geometricTransformMenu">
+    <property name="title">
+     <string>几何变换</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>翻转</string>
+     </property>
+     <addaction name="horizontalAction"/>
+     <addaction name="verticalAction"/>
+    </widget>
+    <addaction name="zoomAction"/>
+    <addaction name="rotatingAction"/>
+    <addaction name="menu_4"/>
+   </widget>
+   <widget class="QMenu" name="grayTransformMenu">
+    <property name="title">
+     <string>灰色变换</string>
+    </property>
+    <addaction name="linearTransformAction"/>
+    <addaction name="exponentialTransformAction"/>
+    <addaction name="logarithmicTransformAction"/>
+    <addaction name="indexTransformAction"/>
+    <addaction name="doubleThresholdTransformAction"/>
+    <addaction name="tensileTransformAction"/>
+    <addaction name="separator"/>
+    <addaction name="binaryContourAction"/>
+   </widget>
+   <widget class="QMenu" name="contourExtractionMenu">
+    <property name="title">
+     <string>轮廓提取</string>
+    </property>
+    <addaction name="detectionExtractAction"/>
+    <addaction name="edgeTrackingAction"/>
+    <addaction name="prewittEdgeDetectionAction"/>
+    <addaction name="sobelEdgeDetectionAction"/>
+   </widget>
+   <widget class="QMenu" name="morphologyMenu">
+    <property name="title">
+     <string>形态学</string>
+    </property>
+    <addaction name="corrosionAction"/>
+    <addaction name="expansionAction"/>
+    <addaction name="onOperationAction"/>
+    <addaction name="offOperationAction"/>
+    <addaction name="refinedProcessingAction"/>
+   </widget>
+   <widget class="QMenu" name="helpMenu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="searchAction"/>
+    <addaction name="aboutAction"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="editMenu"/>
+   <addaction name="artMenu"/>
+   <addaction name="blurAndSharpenMenu"/>
+   <addaction name="geometricTransformMenu"/>
+   <addaction name="grayTransformMenu"/>
+   <addaction name="contourExtractionMenu"/>
+   <addaction name="morphologyMenu"/>
+   <addaction name="helpMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="openAction">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="closeImageAction">
+   <property name="text">
+    <string>关闭图片</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="resaveAction">
+   <property name="text">
+    <string>另存为</string>
+   </property>
+  </action>
+  <action name="resumeAction">
+   <property name="text">
+    <string>恢复</string>
+   </property>
+  </action>
+  <action name="histogramAction">
+   <property name="text">
+    <string>直方图</string>
+   </property>
+  </action>
+  <action name="grayImageAction">
+   <property name="text">
+    <string>灰度图像</string>
+   </property>
+  </action>
+  <action name="brightnessAction">
+   <property name="text">
+    <string>亮度</string>
+   </property>
+  </action>
+  <action name="beganDictationAction">
+   <property name="text">
+    <string>开始听写</string>
+   </property>
+  </action>
+  <action name="expressionAndSymbolAction">
+   <property name="text">
+    <string>表情与符号</string>
+   </property>
+  </action>
+  <action name="movieAction">
+   <property name="text">
+    <string>电影</string>
+   </property>
+  </action>
+  <action name="classicAction">
+   <property name="text">
+    <string>经典</string>
+   </property>
+  </action>
+  <action name="flowersAction">
+   <property name="text">
+    <string>小花</string>
+   </property>
+  </action>
+  <action name="metalAction">
+   <property name="text">
+    <string>金属</string>
+   </property>
+  </action>
+  <action name="clodAction">
+   <property name="text">
+    <string>cold</string>
+   </property>
+  </action>
+  <action name="warmAction">
+   <property name="text">
+    <string>warm</string>
+   </property>
+  </action>
+  <action name="simpleBlurAction">
+   <property name="text">
+    <string>简单模糊</string>
+   </property>
+  </action>
+  <action name="gaussianAction">
+   <property name="text">
+    <string>高斯模糊</string>
+   </property>
+  </action>
+  <action name="medianFilteringAction">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="laplaceSharpeningAction">
+   <property name="text">
+    <string>拉普拉斯锐化</string>
+   </property>
+  </action>
+  <action name="zoomAction">
+   <property name="text">
+    <string>缩放</string>
+   </property>
+  </action>
+  <action name="rotatingAction">
+   <property name="text">
+    <string>旋转</string>
+   </property>
+  </action>
+  <action name="horizontalAction">
+   <property name="text">
+    <string>水平</string>
+   </property>
+  </action>
+  <action name="verticalAction">
+   <property name="text">
+    <string>垂直</string>
+   </property>
+  </action>
+  <action name="linearTransformAction">
+   <property name="text">
+    <string>线性变换</string>
+   </property>
+  </action>
+  <action name="exponentialTransformAction">
+   <property name="text">
+    <string>幂次变换</string>
+   </property>
+  </action>
+  <action name="logarithmicTransformAction">
+   <property name="text">
+    <string>对数变换</string>
+   </property>
+  </action>
+  <action name="indexTransformAction">
+   <property name="text">
+    <string>指数变换</string>
+   </property>
+  </action>
+  <action name="doubleThresholdTransformAction">
+   <property name="text">
+    <string>双阈值变换</string>
+   </property>
+  </action>
+  <action name="tensileTransformAction">
+   <property name="text">
+    <string>拉伸变换</string>
+   </property>
+  </action>
+  <action name="binaryContourAction">
+   <property name="text">
+    <string>二值化</string>
+   </property>
+  </action>
+  <action name="detectionExtractAction">
+   <property name="text">
+    <string>轮廓提取</string>
+   </property>
+  </action>
+  <action name="edgeTrackingAction">
+   <property name="text">
+    <string>边缘跟踪</string>
+   </property>
+  </action>
+  <action name="prewittEdgeDetectionAction">
+   <property name="text">
+    <string>Prewitt 边缘检测</string>
+   </property>
+  </action>
+  <action name="sobelEdgeDetectionAction">
+   <property name="text">
+    <string>Sobel 边缘检测</string>
+   </property>
+  </action>
+  <action name="corrosionAction">
+   <property name="text">
+    <string>腐蚀</string>
+   </property>
+  </action>
+  <action name="expansionAction">
+   <property name="text">
+    <string>膨胀</string>
+   </property>
+  </action>
+  <action name="onOperationAction">
+   <property name="text">
+    <string>开运算</string>
+   </property>
+  </action>
+  <action name="offOperationAction">
+   <property name="text">
+    <string>闭运算</string>
+   </property>
+  </action>
+  <action name="refinedProcessingAction">
+   <property name="text">
+    <string>细化处理</string>
+   </property>
+  </action>
+  <action name="searchAction">
+   <property name="text">
+    <string>搜索</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
