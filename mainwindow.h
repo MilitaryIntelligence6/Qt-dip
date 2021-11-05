@@ -31,5 +31,11 @@ private:
 private slots:
 
     void onOpenFileActionTriggered();
+
+    void onCloseImageActionTriggered();
+
+    void onSaveActionTriggered();
+
+    void onResaveActionTriggered();
 };
 #endif // MAINWINDOW_H

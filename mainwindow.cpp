@@ -8,7 +8,9 @@ MainWindow::MainWindow(QWidget *parent)
 //    ui->menubar->setNativeMenuBar(false);
 //    ui->menuBar->setNativeMenuBar(true);
     QObject::connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::jumpToNewPage);
-    connect(ui->openAction, &QAction::triggered, this, &MainWindow::onOpenFileActionTriggered);
+    QObject::connect(ui->openAction, &QAction::triggered, this, &MainWindow::onOpenFileActionTriggered);
+//    connect(ui->openAction, SIGNAL(triggered()), this, SLOT(onOpenFileActionTriggered()));
+
 }
 
 MainWindow::~MainWindow() {
@@ -23,4 +25,17 @@ void MainWindow::jumpToNewPage() {
 void MainWindow::onOpenFileActionTriggered() {
 //    QString
     QDebug((QString *) "open file has been on clicked");
+    jumpToNewPage();
+}
+
+void MainWindow::onCloseImageActionTriggered() {
+
+}
+
+void MainWindow::onSaveActionTriggered() {
+
+}
+
+void MainWindow::onResaveActionTriggered() {
+
 }
