@@ -25,6 +25,7 @@ void MainWindow::jumpToNewPage() {
 void MainWindow::onOpenFileActionTriggered() {
 //    QString
     QDebug((QString *) "open file has been on clicked");
+    printf("open file has been on clicked");
     jumpToNewPage();
 }
 
@@ -33,7 +34,15 @@ void MainWindow::onCloseImageActionTriggered() {
 }
 
 void MainWindow::onSaveActionTriggered() {
-
+//    class Hello {
+//    private:
+//        int num;
+//    protected:
+//
+//    };
+//    Hello *hello = new Hello;
+//    delete hello;
+//    hello = nullptr;
 }
 
 void MainWindow::onResaveActionTriggered() {
